@@ -48,7 +48,7 @@
       </h1>
       <p class="case-hero-lede">
         An end-to-end machine learning pipeline that predicts which telecom
-        customers are likely to leave — surfacing the key drivers of churn and
+        customers are likely to leave, surfacing the key drivers of churn and
         translating them into actionable retention strategies.
       </p>
 
@@ -203,7 +203,7 @@
             <h3>Short-tenure customers churn more</h3>
             <p>
               Churn is concentrated in the first <strong>10 months</strong>.
-              The longer someone stays, the more likely they keep staying — so
+              The longer someone stays, the more likely they keep staying, so
               the first year is where retention efforts pay off the most.
             </p>
             <div class="insight-stats">
@@ -223,7 +223,7 @@
             <p>
               Contract type is the single most predictive feature.
               Month-to-month customers churn at <strong>~58%</strong>, vs. just
-              <strong>21%</strong> on two-year deals — pushing customers into
+              <strong>21%</strong> on two-year deals. Pushing customers into
               longer commitments has the largest single impact on retention.
             </p>
             <div class="insight-stats">
@@ -243,7 +243,7 @@
             <h3>Higher monthly charges increase churn risk</h3>
             <p>
               Customers with higher bills are more likely to leave. Pricing,
-              perceived value, and bill-shock all matter — especially when paired
+              perceived value, and bill-shock all matter, especially when paired
               with short tenure on a flexible contract.
             </p>
             <div class="insight-stats">
@@ -267,7 +267,7 @@
       <p class="section-lede">
         Both models were trained on the same engineered feature matrix and
         scored on a held-out 20% test set. Random Forest captured non-linear
-        interactions between contract, tenure, and spend — winning on every
+        interactions between contract, tenure, and spend, winning on every
         headline metric.
       </p>
 
@@ -291,7 +291,7 @@
             <h3>Random Forest</h3>
             <span class="model-tag best">Best Model</span>
           </div>
-          <p class="model-desc">An ensemble of decision trees that captures interactions linear models miss — the right fit for tabular customer data.</p>
+          <p class="model-desc">An ensemble of decision trees that captures interactions linear models miss. The right fit for tabular customer data.</p>
           <div class="model-metric-grid">
             <div><span>Accuracy</span><strong>82%</strong></div>
             <div><span>Precision</span><strong>0.79</strong></div>
@@ -327,15 +327,15 @@
             “Missing a churner costs more than flagging a loyal customer.”
           </p>
           <p>
-            In retention, the asymmetry of error matters. A false alarm — flagging
-            a happy customer for outreach — costs a small discount or a
-            check-in call. A missed churner costs the full lifetime value of
+            In retention, the asymmetry of error matters. A false alarm
+            (flagging a happy customer for outreach) costs a small discount or
+            a check-in call. A missed churner costs the full lifetime value of
             that account, plus the cost of acquiring a replacement.
           </p>
           <p>
             That's why the Random Forest's <strong>74% recall</strong> on the
             churn class is the headline metric, not raw accuracy. It means we
-            catch nearly three out of every four customers about to leave —
+            catch nearly three out of every four customers about to leave,
             early enough for the retention team to act.
           </p>
         </div>
@@ -378,7 +378,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
           </div>
           <h3>Gradient Boosting</h3>
-          <p>Try <strong>XGBoost</strong> and <strong>LightGBM</strong> — typically the strongest tabular performers, especially on imbalanced classes.</p>
+          <p>Try <strong>XGBoost</strong> and <strong>LightGBM</strong>, typically the strongest tabular performers, especially on imbalanced classes.</p>
         </article>
 
         <article class="next-card reveal">
@@ -386,7 +386,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
           </div>
           <h3>Explainability with SHAP</h3>
-          <p>Layer in <strong>SHAP values</strong> for per-customer explanations — so the retention team understands <em>why</em> each prediction was made.</p>
+          <p>Layer in <strong>SHAP values</strong> for per-customer explanations, so the retention team understands <em>why</em> each prediction was made.</p>
         </article>
 
         <article class="next-card reveal">
@@ -394,7 +394,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
           </div>
           <h3>FastAPI Deployment</h3>
-          <p>Wrap the trained model in a <strong>FastAPI</strong> service for real-time scoring — production-ready predictions over HTTP.</p>
+          <p>Wrap the trained model in a <strong>FastAPI</strong> service for real-time scoring. Production-ready predictions over HTTP.</p>
         </article>
       </div>
     </div>
