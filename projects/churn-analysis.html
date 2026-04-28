@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Churn Analysis | Daniyal Bukhari</title>
+  <meta name="description" content="A machine-learning project predicting customer churn for a telecom dataset. Logistic Regression vs Random Forest, with EDA, feature engineering, and plain-English findings." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html#home" class="logo">Daniyal<span>.</span></a>
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <a href="../CV_with_thesis.pdf" class="btn-resume" download="Daniyal_Bukhari_CV.pdf">
+        Resume
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Project hero -->
+  <section class="project-hero">
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="container">
+      <a href="../index.html#projects" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back to Projects
+      </a>
+
+      <span class="section-eyebrow">Project 01 — Machine Learning</span>
+      <h1 class="project-hero-title">Customer Churn Analysis</h1>
+      <p class="project-hero-lede">
+        Built an end-to-end pipeline in Python to predict which telecom customers
+        are about to leave — exploratory analysis, feature engineering, two
+        classification models, and a clear set of business takeaways.
+      </p>
+
+      <div class="project-tags hero-tags">
+        <span>Python</span>
+        <span>Pandas</span>
+        <span>scikit-learn</span>
+        <span>Logistic Regression</span>
+        <span>Random Forest</span>
+        <span>Matplotlib</span>
+        <span>Seaborn</span>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="https://github.com/Daniyal26/churn-analysis" target="_blank" rel="noopener" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.27-.01-1-.02-1.96-3.2.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.35.78 1.05.78 2.12 0 1.53-.01 2.76-.01 3.13 0 .31.21.67.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+          View Source on GitHub
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <a href="../index.html#contact" class="btn btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key metrics -->
+  <section class="section">
+    <div class="container">
+      <span class="section-eyebrow">At a Glance</span>
+      <h2 class="section-title">Project Snapshot</h2>
+
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-num">2000</div>
+          <div class="stat-label">Customers Analyzed</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-num">16</div>
+          <div class="stat-label">Raw Features</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-num">43</div>
+          <div class="stat-label">% Churn Rate</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-num">74</div>
+          <div class="stat-label">% Best Accuracy</div>
+        </div>
+      </div>
+
+      <div class="prose reveal">
+        <h3>The Problem</h3>
+        <p>
+          Telecom companies lose substantial revenue to customer churn — yet the
+          signals that predict who's about to leave are buried in everyday
+          account data. The goal here was to build a transparent pipeline that
+          identifies at-risk customers and surfaces the levers that influence
+          their decision to stay or go.
+        </p>
+
+        <h3>The Approach</h3>
+        <p>
+          The notebook walks through a standard ML workflow: data cleaning,
+          exploratory analysis, feature engineering (tenure buckets, average
+          monthly spend, one-hot encoding for categorical fields), then training
+          and comparing two classifiers — Logistic Regression and Random Forest —
+          on a held-out test set.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDA / plots -->
+  <section class="section section-alt">
+    <div class="container">
+      <span class="section-eyebrow">Exploratory Analysis</span>
+      <h2 class="section-title">What the Data Showed</h2>
+
+      <div class="plot-grid">
+        <figure class="plot-card reveal">
+          <img src="images/01_churn_distribution.png" alt="Bar chart of churn distribution: roughly 1120 customers stayed and 860 left." />
+          <figcaption>
+            <strong>Churn is highly imbalanced.</strong> About 4 in 10 customers
+            churn — high enough to hurt revenue, but the dataset still skews
+            toward customers who stayed.
+          </figcaption>
+        </figure>
+
+        <figure class="plot-card reveal">
+          <img src="images/02_tenure_vs_churn.png" alt="Histogram of tenure in months split by churn status; churn is heaviest in the first 10 months." />
+          <figcaption>
+            <strong>Early-tenure customers leave the most.</strong> Churn is
+            heaviest in the first ~10 months, then steadily drops. The first
+            year is the danger zone.
+          </figcaption>
+        </figure>
+
+        <figure class="plot-card reveal">
+          <img src="images/03_contract_vs_churn.png" alt="Bar chart of churn rate by contract type: Month-to-month 58%, One year 30%, Two year 21%." />
+          <figcaption>
+            <strong>Contract type is the single biggest signal.</strong>
+            Month-to-month customers churn at 58%, vs. just 21% on two-year
+            contracts. Lock-in works.
+          </figcaption>
+        </figure>
+
+        <figure class="plot-card reveal">
+          <img src="images/04_correlation_heatmap.png" alt="Correlation heatmap of numeric features with churn." />
+          <figcaption>
+            <strong>Tenure protects, monthly charges hurt.</strong> Tenure is
+            negatively correlated with churn (-0.22), while higher monthly
+            charges push it up (+0.23).
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modeling -->
+  <section class="section">
+    <div class="container">
+      <span class="section-eyebrow">Modeling</span>
+      <h2 class="section-title">Two Models, Side by Side</h2>
+
+      <div class="prose reveal">
+        <p>
+          After an 80/20 train/test split (1,584 training rows, 396 test rows) on
+          the cleaned dataset, both classifiers were fit on the same engineered
+          feature matrix and scored on the same held-out test set.
+        </p>
+      </div>
+
+      <div class="model-table-wrap reveal">
+        <table class="model-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Accuracy</th>
+              <th>Precision (Churn)</th>
+              <th>Recall (Churn)</th>
+              <th>F1 (Churn)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="winner">
+              <td><strong>Logistic Regression</strong> <span class="winner-tag">Best</span></td>
+              <td>74.5%</td>
+              <td>0.72</td>
+              <td>0.67</td>
+              <td>0.70</td>
+            </tr>
+            <tr>
+              <td>Random Forest</td>
+              <td>67.9%</td>
+              <td>0.65</td>
+              <td>0.56</td>
+              <td>0.60</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="plot-grid two-up">
+        <figure class="plot-card reveal">
+          <img src="images/05_cm_logreg.png" alt="Confusion matrix for Logistic Regression: 179 true negatives, 116 true positives, 45 false positives, 56 false negatives." />
+          <figcaption>
+            <strong>Logistic Regression</strong> caught 116 of 172 churners
+            (recall 67%) — the better generalizer on this dataset.
+          </figcaption>
+        </figure>
+
+        <figure class="plot-card reveal">
+          <img src="images/06_cm_rf.png" alt="Confusion matrix for Random Forest: 172 true negatives, 97 true positives, 52 false positives, 75 false negatives." />
+          <figcaption>
+            <strong>Random Forest</strong> only caught 97 churners (recall 56%) —
+            likely overfitting noisy synthetic features.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="prose reveal">
+        <h3>Top Churn Drivers (from Random Forest)</h3>
+        <ul class="driver-list">
+          <li><span class="driver-name">MonthlyCharges</span><span class="driver-bar" style="--w: 100%"></span><span class="driver-val">0.147</span></li>
+          <li><span class="driver-name">tenure</span><span class="driver-bar" style="--w: 95%"></span><span class="driver-val">0.140</span></li>
+          <li><span class="driver-name">TotalCharges</span><span class="driver-bar" style="--w: 92%"></span><span class="driver-val">0.136</span></li>
+          <li><span class="driver-name">avg_monthly_spend</span><span class="driver-bar" style="--w: 92%"></span><span class="driver-val">0.136</span></li>
+          <li><span class="driver-name">Contract_Two year</span><span class="driver-bar" style="--w: 34%"></span><span class="driver-val">0.050</span></li>
+          <li><span class="driver-name">Contract_One year</span><span class="driver-bar" style="--w: 27%"></span><span class="driver-val">0.040</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plain English findings -->
+  <section class="section section-alt">
+    <div class="container">
+      <span class="section-eyebrow">Bottom Line</span>
+      <h2 class="section-title">In Plain English</h2>
+
+      <ol class="findings-list">
+        <li class="reveal">
+          <span class="finding-num">1</span>
+          <div>
+            <h3>Churn is real and big</h3>
+            <p>About 4 out of 10 customers leave. That's a meaningful slice of revenue walking out the door each year.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="finding-num">2</span>
+          <div>
+            <h3>The first months are the riskiest</h3>
+            <p>Most churn happens in the first ~10 months. The longer a customer stays, the more likely they keep staying.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="finding-num">3</span>
+          <div>
+            <h3>Contract length is the killer feature</h3>
+            <p>Month-to-month: 58% churn. One-year: 30%. Two-year: 21%. Pushing customers into longer contracts has the largest single impact on retention.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="finding-num">4</span>
+          <div>
+            <h3>Higher bills push customers out</h3>
+            <p>Customers paying more each month are more likely to leave. Pricing, perceived value, and bill-shock all matter.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="finding-num">5</span>
+          <div>
+            <h3>Simple beat complex</h3>
+            <p>Logistic Regression (74.5%) outperformed Random Forest (67.9%) on this dataset — a reminder that more complexity doesn't always mean better generalization.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container cta-block reveal">
+      <h2>Want to dig into the code?</h2>
+      <p>The full notebook, dataset generator, and outputs are on GitHub.</p>
+      <div class="hero-buttons">
+        <a href="https://github.com/Daniyal26/churn-analysis" target="_blank" rel="noopener" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.27-.01-1-.02-1.96-3.2.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.35.78 1.05.78 2.12 0 1.53-.01 2.76-.01 3.13 0 .31.21.67.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+          View on GitHub
+        </a>
+        <a href="../index.html#projects" class="btn btn-secondary">More Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html#home" class="logo">Daniyal<span>.</span></a>
+        <p>AI / ML Analyst &amp; Data Enthusiast</p>
+      </div>
+      <p class="footer-copy">&copy; <span id="year"></span> Daniyal Bukhari. Designed &amp; built with care.</p>
+    </div>
+  </footer>
+
+  <a href="#" class="scroll-top" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+  </a>
+
+  <script src="../script.js"></script>
+</body>
+</html>
