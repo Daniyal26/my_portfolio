@@ -169,6 +169,8 @@ h1, h2, h3 { font-family: var(--font-display); }
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
   font-family: var(--font-display);
   font-size: 1.4rem;
   font-weight: 800;
@@ -177,6 +179,24 @@ h1, h2, h3 { font-family: var(--font-display); }
 }
 
 .logo span { color: var(--brand-1); }
+
+.logo-mark {
+  display: block;
+  height: 32px;
+  width: auto;
+  transition: transform var(--t-fast), filter var(--t);
+}
+
+.logo:hover .logo-mark {
+  transform: translateY(-1px) scale(1.04);
+  filter: drop-shadow(0 4px 10px rgba(37, 99, 235, 0.25));
+}
+
+.footer-brand .logo-mark { height: 28px; }
+
+@media (max-width: 720px) {
+  .logo-mark { height: 28px; }
+}
 
 .nav-links {
   display: flex;
