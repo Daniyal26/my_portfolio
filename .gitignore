@@ -1,0 +1,5 @@
+# Claude Code local settings (machine-specific)
+.claude/settings.local.json
+
+# Temp Chrome profile used for PDF rendering
+.chrome-tmp/
