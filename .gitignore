@@ -3,3 +3,4 @@
 
 # Temp Chrome profile used for PDF rendering
 .chrome-tmp/
+*.stackdump
